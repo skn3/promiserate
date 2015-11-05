@@ -1,0 +1,20 @@
+{
+  "name": "promiserate",
+  "version": "1.0.0",
+  "description": "Iterate over an array of promises one by one",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skn3/promiserate"
+  },
+  "keywords": [
+    "promise",
+    "promises",
+    "iterate"
+  ],
+  "author": "Jonathan Pittock",
+  "license": "MIT"
+}
