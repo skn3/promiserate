@@ -12,8 +12,10 @@ module.exports = function (source, callback) {
 		}
 	} else {
 		//array
-		for (var index in source) {
-			items.push({index: index, item: source[index]});
+		if (source.length > 0) {
+			for (var index in source) {
+				items.push({index: index, item: source[index]});
+			}
 		}
 	}
 
@@ -28,6 +30,14 @@ module.exports = function (source, callback) {
 			});
 	}
 
-	//start to iterate
-	return next(0);
+	//check to see if there is anything to iterate
+	if (items.length == 0) {
+		//dummy promise!
+		return new Promise(function (resolve, reject) {
+			resolve();
+		})
+	} else {
+		//start
+		return next(0);
+	}
 };
